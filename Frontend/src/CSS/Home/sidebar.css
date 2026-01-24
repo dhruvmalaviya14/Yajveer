@@ -1,0 +1,97 @@
+.mn1{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgb(183, 182, 182);
+}
+
+.threed{
+    width: 10%;
+    height: 100%;
+    background-color: #15803d;
+}
+
+.threed1{
+    width: 90%;
+    height: 90%;
+    background-color: #15803d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+.mn1lo{
+    width: 60%;
+    height: 100%;
+    /* background-color:#e5f0da ; */
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    color: Green;
+    text-align: center;
+}
+
+
+
+.mn1lo p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    /* font-family: ; */
+    color: #664b0e;
+    font: 900;
+}
+.mn1lo{
+    height: 100%;
+}
+
+.mnadd{
+    width: 30%;
+    height: 100%;
+    background-color:white ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mn1like{
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #15803d;
+    font-size: 20px;
+    font: 900;
+    cursor: pointer;
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+
+
+@media (min-width:1024px) {
+    .mn1{
+        display: none;
+    }
+}
+
+
+
+@media (max-width:550px) {
+    .mn1lo p{
+        font-size: 22px;
+    }
+}
+
+@media (max-width:400px) {
+    .mn1lo p{
+        font-size: 19px;
+    }
+}

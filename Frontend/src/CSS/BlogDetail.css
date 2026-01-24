@@ -1,0 +1,41 @@
+.blog-detail-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 128, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.blog-title {
+  font-size: 2.8rem;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-image {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #2e3a59;
+  text-align: justify;
+  padding: 0 10px;
+}
+
+.blog-error {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #d32f2f;
+}

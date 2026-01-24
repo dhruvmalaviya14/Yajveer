@@ -1,0 +1,105 @@
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.reviews-container-vertical {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Each review card */
+.review-card-vertical {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: calc(33.33% - 32px); /* 3 in a row */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.review-card-vertical:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile photo: circular */
+.user-photo-vertical {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.user-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 4px 0;
+  color: #28a745;
+  text-align: center;
+}
+
+.stars {
+  color: #ffb400;
+  font-size: 1.1rem;
+  margin: 6px 0;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  color: #333;
+  text-align: center;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.delete-button {
+  padding: 8px 14px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #cc0000;
+}
+
+/* Medium screen (2 per row) */
+@media (max-width: 992px) {
+  .review-card-vertical {
+    width: calc(50% - 24px);
+  }
+}
+
+/* Small screen (1 per row) */
+@media (max-width: 600px) {
+  .review-card-vertical {
+    width: 100%;
+  }
+
+  .user-photo-vertical {
+    width: 75px;
+    height: 75px;
+  }
+
+  .delete-button {
+    width: 100%;
+  }
+}

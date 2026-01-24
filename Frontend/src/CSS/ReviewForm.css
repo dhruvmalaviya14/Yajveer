@@ -1,0 +1,415 @@
+/* ReviewForm.css - Yajveer Ayurvedic Styling */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@400;500;600&display=swap');
+
+:root {
+  --primary-color: #3a7d44;
+  /* Ayurvedic green */
+  --secondary-color: #5e8c5e;
+  /* Muted green */
+  --accent-color: #d4a762;
+  /* Golden accent */
+  --text-color: #2b2d42;
+  --text-light: #5a5a5a;
+  --bg-color: #f8f5f0;
+  /* Light earthy background */
+  --white: #ffffff;
+  --border-color: #d1d1d1;
+  --error-color: #e63946;
+  --success-color: #2a9d8f;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Base Styles */
+.review-section {
+  padding: 2rem 1rem;
+  background-color: var(--bg-color);
+  min-height: calc(100vh - 300px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.review-box {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  margin: 2rem 0;
+}
+
+.review-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(58, 125, 68, 0.1);
+  position: relative;
+}
+
+.review-left::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%233a7d44" opacity="0.1"><path d="M30,50 Q50,30 70,50 T90,50"></path></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.review-left img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+  position: relative;
+  z-index: 1;
+}
+
+.review-right {
+  flex: 1;
+  padding: 3rem;
+}
+
+.review-right h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: var(--transition);
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--white);
+  color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(58, 125, 68, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Image Upload Styling */
+.image-upload-section {
+  margin-top: 1rem;
+  border: 1px dashed var(--border-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(58, 125, 68, 0.05);
+  transition: var(--transition);
+}
+
+.image-upload-section:hover {
+  border-color: var(--primary-color);
+  background-color: rgba(58, 125, 68, 0.08);
+}
+
+.image-upload-label {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+}
+
+.highlight-text {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.image-upload-container input[type="file"] {
+  display: none;
+}
+
+.browse-button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.browse-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-1px);
+}
+
+.browse-button svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.file-name {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  word-break: break-word;
+}
+
+.upload-instruction {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Image Preview */
+.preview-box {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.preview-image {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.remove-image {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.remove-image:hover {
+  color: #c1121f;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.submit-btn:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Error Message */
+.error-message {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .review-box {
+    flex-direction: column;
+    max-width: 600px;
+  }
+
+  .review-left {
+    padding: 1.5rem;
+  }
+
+  .review-left img {
+    max-height: 200px;
+  }
+
+  .review-right {
+    padding: 2rem;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  .review-section {
+    padding: 1rem;
+  }
+
+  .review-box {
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+
+  .review-right {
+    padding: 1.5rem;
+  }
+
+  .review-right h2 {
+    font-size: 1.5rem;
+  }
+
+  .image-upload-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .browse-button {
+    width: 100%;
+  }
+
+  .file-name {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .preview-image {
+    max-width: 120px;
+    max-height: 120px;
+  }
+}
+
+/* Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .review-right {
+    padding: 1.2rem;
+  }
+
+  .review-form {
+    gap: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .review-left img {
+    max-height: 150px;
+  }
+}
+
+/* Loading Animation Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(58, 125, 68, 0.2);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error Popup Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,167 @@
+.faq-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.faq-container h1 {
+    text-align: center;
+    color: #000; 
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    position: relative;
+    padding-bottom: 1rem;
+    font-weight: 600; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.faq-container h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;           
+    max-width: 1100px;    
+    height: 3px;
+    background: linear-gradient(to right, #0a9a0a, #2ecc71);
+    border-radius: 2px;
+}
+
+.faq-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    gap: 2rem;
+}
+
+.faq-item {
+    flex: 0 0 calc(50% - 1rem);
+    background: #fff;
+    border: 1px solid #009245;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.faq-item.active {
+    box-shadow: 0 8px 24px rgba(0, 146, 69, 0.2); 
+}
+
+/* QUESTION */
+.faq-question {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000;
+    transition: background-color 0.3s ease;
+    border-radius: 12px 12px 0 0;
+}
+
+.faq-item.active .faq-question {
+    background-color: #f9f9f9;
+}
+
+/* TOGGLE ICON */
+.toggle-icon {
+    background-color: #009245;
+    color: white;
+    font-size: 24px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    transform: rotate(0deg);
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(180deg); /* ✅ Rotate icon when active */
+}
+
+/* Optional: change + to − with data-toggle (JS) */
+.toggle-icon::after {
+    content: '+';
+}
+
+.faq-item.active .toggle-icon::after {
+    content: '−';
+}
+
+.question-text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ANSWER */
+.faq-answer {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    transition: all 0.4s ease;
+    background: #fff;
+    font-size: 16px;
+}
+
+.faq-answer.show {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    padding: 1.5rem;
+}
+
+/* LIST + PARAGRAPH */
+.faq-answer ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.faq-answer li,
+.faq-answer p {
+    margin-bottom: 0.8rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .faq-grid {
+        gap: 1rem;
+    }
+
+    .faq-item {
+        flex: 0 0 100%;
+    }
+
+    .faq-question {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .toggle-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin-right: 12px;
+    }
+
+    .faq-answer {
+        font-size: 15px;
+    }
+}

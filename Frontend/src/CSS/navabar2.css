@@ -1,0 +1,232 @@
+ .Navbar2{
+    width: 100vw;
+    height: 15vh;
+    background-color: #166534;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: nunito;
+    border: none;
+}
+
+.logo{
+    display: flex;
+    align-items: center;  
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 100%;
+    width: 10%;
+    background-color: white;
+}
+
+.logo > img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.search{
+    height: 100%;
+    background-color: #dcfce7;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: none;
+    cursor: pointer;
+}
+
+.s1{
+    width: 90%;
+    height: 50%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    border: 1px solid rgb(195, 193, 193);
+}
+
+
+
+.list {
+  width: 20%;
+  height: 100%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: #dcfce7;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(66, 60, 60);
+  font-weight: 400;
+  border-right: 1px solid rgb(195, 193, 193);
+  position: relative;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Menulist {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: gray;
+  display: none;
+  flex-direction: column;
+  padding: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.Menulist > p{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+     border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.Menulist > p:hover{
+    background-color: #dcfce7;
+}
+.list:hover .Menulist {
+  display: flex;
+}
+
+
+
+
+.content{
+    width: 80%;
+    height: 100%;
+    background-color: #dcfce7;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    cursor: pointer;
+    border-right: none;
+}
+
+.input{
+    width: 80%;
+    height: 100%;
+    background-color: #dcfce7;
+    cursor: pointer;
+}
+
+.input > input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #dcfce7;
+    padding-left: 15px;
+    font-family: nunito;
+    font-size: 16px;
+    font: 700;
+    color: rgb(66, 60, 60);
+    cursor: pointer;
+}
+
+.s2{
+    width: 20%;
+    height: 100%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    border-right: 1px solid #22c55e;
+}
+
+.con{
+    width: 50%;
+    height: 100%;
+    background-color: #22c55e;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.addtocart{
+    height: 100%;
+    width: 20%;
+    background-color: #dcfce7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.like{
+    width: 45%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #22c55e;
+     border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+     border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font: 700;
+
+}
+
+.add{
+    width: 45%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: #22c55e;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+     border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font: 700;
+} 
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+/* For tablets and below */
+@media (max-width: 1024px) {
+  .Navbar2 {
+    display: none;
+  }
+}

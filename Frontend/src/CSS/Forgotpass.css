@@ -1,0 +1,28 @@
+/* Extra styling specific to Forgot Email page */
+
+.logf button {
+  margin-top: 20px;
+  background-color: #22c55e;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.logf button:hover {
+  background-color: #1aaa4c;
+}
+
+/* Center and style the Send OTP button like Login */
+.forgot-btn3 {
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  width: 80%;
+  height: 45px;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+}

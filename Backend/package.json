@@ -1,0 +1,36 @@
+{
+  "name": "yajveerbackend",
+  "version": "1.0.0",
+  "description": "This is the project about the commercial purpose of selling all kind of ayurvedic product",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node -r dotenv/config --experimental-json-modules src/index.js",
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
+  "author": "Rishi-Kukadiya",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "@sparticuz/chromium": "^133.0.0",
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.6.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "handlebars": "^4.7.8",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.0",
+    "mongoose-paginate-v2": "^1.9.0",
+    "multer": "^2.0.0",
+    "nodemailer": "^7.0.3",
+    "puppeteer": "^24.10.0",
+    "serverless-http": "^3.2.0",
+    "socket.io": "^4.8.1",
+    "streamifier": "^0.1.1"
+  }
+}

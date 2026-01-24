@@ -1,0 +1,331 @@
+/* Orders Dashboard Container */
+.orders-dashboard {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.dashboard-title {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Table Container */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: white;
+}
+
+/* Orders Table */
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.orders-table th {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+.orders-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+
+.orders-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Customer Info */
+.customer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-name {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.customer-email {
+    font-size: 13px;
+    color: #6c757d;
+}
+
+/* Products Info */
+.products-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-weight: 600;
+    color: #28a745;
+    margin-bottom: 4px;
+}
+
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+    color: #6c757d;
+}
+
+.product-details span {
+    background: #f1f1f1;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* Status Badge */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+.status-badge.pending {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.status-badge.completed {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-badge.failed {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Order Total */
+.order-total {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* No Orders Message */
+.no-orders {
+    text-align: center;
+    padding: 30px;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+/* Payment Status Header */
+.payment-status-header {
+    text-align: center;
+    line-height: 1.2;
+}
+
+.payment-status-header div:first-child {
+    margin-bottom: 2px;
+}
+
+/* Status Button */
+.status-button {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.status-button.pending {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.status-button.completed {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-button.failed {
+    background-color: #dc3545;
+    color: white;
+}
+
+.status-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Adjust the status column width */
+.orders-table th:nth-child(6),
+.orders-table td:nth-child(6) {
+    width: 120px;
+    min-width: 120px;
+}
+
+.orders-table td {
+  border-bottom: none !important;
+}
+
+.order-separator td {
+  height: 0;
+  padding: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.order-separator:hover {
+  background: transparent !important;
+}
+
+.customer-info {
+  gap: 0;
+}
+
+.product-details {
+  gap: 6px;
+  margin-top: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .orders-dashboard {
+        padding: 10px;
+    }
+
+    .dashboard-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .product-details {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .status-badge {
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-title {
+        font-size: 18px;
+    }
+
+    .customer-info,
+    .product-item {
+        font-size: 14px;
+    }
+
+    .orders-table {
+        min-width: 100%;
+    }
+}
+
+
+.orders-table td {
+  border-bottom: none !important;
+}
+
+.order-separator td {
+  height: 0;
+  padding: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.order-separator:hover {
+  background: transparent !important;
+}
+
+.customer-info {
+  gap: 0;
+}
+
+.product-details {
+  gap: 6px;
+  margin-top: 2px;
+}
+
+/* Address Column */
+.customer-address {
+    white-space: pre-wrap;
+    font-size: 14px;
+    color: #34495e;
+}
+
+/* Created At Column */
+.created-at {
+    font-size: 13px;
+    color: #6c757d;
+    white-space: nowrap;
+}
+
+.orders-table th:nth-child(4),
+.orders-table td:nth-child(4), 
+.orders-table th:nth-child(5),
+.orders-table td:nth-child(5)   {
+    min-width: 160px;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.orders-table td.products-info,
+.orders-table th:nth-child(6) {
+  min-width: 240px;
+  width: 240px;
+  white-space: normal;
+  word-wrap: break-word;
+  vertical-align: top;
+}
+
+@media (max-width: 480px) {
+    .customer-address,
+    .created-at {
+        font-size: 12px;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        font-size: 12px;
+    }
+}
+
+
+.orders-table td.products-info,
+.orders-table th:nth-child(6) {
+  min-width: 240px;
+  width: 240px;
+  white-space: normal;
+  word-wrap: break-word;
+  vertical-align: top;
+}

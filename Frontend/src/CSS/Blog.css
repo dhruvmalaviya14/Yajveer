@@ -1,0 +1,87 @@
+.blog-container {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  color: #0a5900;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+/* Grid Layout */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Card Styling */
+.blog-card {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.20);
+}
+
+/* Product Image */
+.blog-img {
+  width: 100%;
+  max-width: 200px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+/* Product Title */
+.blog-heading {
+  font-size: 1.4rem;
+  color: #146400;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Product Description */
+.blog-description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* Read More Button */
+.read-more-btn {
+  background-color: #176c26;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #0f4c1c;
+}
+
+/* Responsive Text Alignment */
+@media (max-width: 768px) {
+  .blog-description {
+    text-align: center;
+  }
+}

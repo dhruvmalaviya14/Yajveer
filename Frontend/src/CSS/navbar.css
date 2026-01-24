@@ -1,0 +1,142 @@
+:root {
+  --success-50: #f0fdf4;
+  --success-100: #dcfce7;
+  --success-200: #bbf7d0;
+  --success-300: #86efac;
+  --success-400: #4ade80;
+  --success-500: #22c55e;
+  --success-600: #27ae60;
+  --success-700: #15803d;
+  --success-800: #166534;
+  --success-900: #14532d;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--success-600);
+  color: white;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.navbar-left p,
+.navbar-right p,
+.account-button {
+  margin: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navbar-left p:hover,
+.navbar-right p:hover {
+  color: var(--success-200);
+}
+
+.account-button {
+  background-color: var(--success-700);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.account-button:hover {
+  background-color: var(--success-800);
+}
+
+.account-button:focus {
+  outline: 2px solid var(--success-400);
+  outline-offset: 2px;
+}
+
+.navbar-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 8px 0;
+  list-style: none;
+  margin: 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 160px;
+  z-index: 1000;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+}
+
+.navbar-dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  color: var(--gray-700);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: var(--success-50);
+}
+
+.dropdown-menu li i {
+  color: var(--gray-500);
+  font-size: 1.1rem;
+}
+
+.navbar-logo {
+  display: none;
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+}
+
+

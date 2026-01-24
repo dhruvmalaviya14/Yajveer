@@ -1,0 +1,23 @@
+/* Extra styling specific to Reset Password page */
+
+.logf button {
+  margin-top: 30px;
+  background-color: #22c55e;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.logf button:hover {
+  background-color: #1aaa4c;
+}
+
+.forgot-btn2 {
+  background-color: #22c55e;
+  color: white;
+  width: 100%;
+  height: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+}

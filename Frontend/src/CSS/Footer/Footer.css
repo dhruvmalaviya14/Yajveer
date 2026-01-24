@@ -1,0 +1,223 @@
+.footer {
+    background-image: url('../../assets/Footer.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 4rem 0 1rem;
+    color: #ffffff;
+    min-height: 500px; 
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);  
+    z-index: 1;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.footer-column.about p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #cccccc;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column.quick-links ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.footer-column.quick-links ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-column.quick-links ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.footer-column.quick-links ul li i {
+    color: #cccccc;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-column.quick-links ul li:hover i {
+    color: #ffffff;
+}
+
+.footer-column.information ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.footer-column.information ul li a:hover {
+    color: #ffffff;
+    padding-left: 1.5rem;
+}
+
+.footer-column.information ul li a::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.footer-column.information ul li a:hover::before {
+    transform: scale(1.2);
+}
+
+.footer-column.contact ul li {
+    color: #cccccc;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-column.contact ul li:hover {
+    color: #ffffff;
+}
+
+.footer-column.contact ul li i {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.footer-column.contact ul li:hover i {
+    transform: scale(1.1);
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-top: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.footer-bottom p {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        background-size: 100% 100%; 
+        min-height: 450px; 
+    }
+    
+    .footer-content {
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        background-size: 100% 100%;  
+        min-height: 400px;  
+        padding: 2rem 0 1rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: left;  
+        padding: 0 1.5rem;
+    }
+
+    .social-icons {
+        justify-content: flex-start;  
+    }
+
+    .footer-column.quick-links ul li a,
+    .footer-column.contact ul li {
+        justify-content: flex-start;  
+    }
+
+    .footer-column.information ul li a::before {
+        display: block;  
+    }
+
+    .footer-column.information ul li a {
+        padding-left: 1rem;  
+    }
+
+    .footer-logo {
+        margin: 1rem 0; 
+    }
+
+    .footer-bottom {
+        text-align: left;  
+        padding-left: 1.5rem;
+    }
+}

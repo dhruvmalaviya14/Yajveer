@@ -1,0 +1,135 @@
+.greeting-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9f5f1 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.greeting-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 28rem;
+    text-align: center;
+}
+
+/* Tight Spacing System */
+.tight-spacing {
+    margin: 0;
+    padding: 0;
+}
+
+.tight-line {
+    margin: 0.5rem 0;
+    line-height: 1.4;
+    padding: 0;
+}
+
+/* Typography */
+.greeting-title {
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+    margin: 0.5rem 0 0.8rem;
+    color: #2d3748;
+}
+
+.delivery-message,
+.receipt-message,
+.thank-you-message {
+    font-size: clamp(0.95rem, 3.5vw, 1.05rem);
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.highlight {
+    color: #e67e22;
+    font-weight: 600;
+}
+
+.receipt-note {
+    display: block;
+    font-size: 0.8em;
+    color: #718096;
+    font-style: italic;
+    width: 100%;
+    margin-top: 0.2rem;
+}
+
+/* Success Animation */
+.success-animation {
+    margin: 0 auto 0.5rem;
+}
+
+.checkmark-icon {
+    font-size: 3rem;
+    color: #1e9836;
+}
+
+.centered-checkmark-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+}
+
+.checkmark-icon {
+    font-size: 3rem;
+    color: #238937;
+}
+
+/* Button */
+.continue-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #238937;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 1rem 0 0;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.continue-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive Fine-tuning */
+@media (max-width: 480px) {
+    .greeting-card {
+        padding: 1.2rem;
+    }
+
+    .tight-line {
+        margin: 0.4rem 0;
+    }
+
+    .checkmark-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .delivery-message,
+    .receipt-message,
+    .thank-you-message {
+        gap: 0.3rem;
+    }
+
+    .receipt-note {
+        font-size: 0.75em;
+    }
+}

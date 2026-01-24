@@ -1,0 +1,230 @@
+.mainNav{
+    width: 100vw;
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border : 1px solid rgb(188, 183, 183); */
+}
+
+.items{
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font: 400;
+    font-family: nunito;
+    font-size: 17px;
+    color: gray;
+    position: relative;
+}
+
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Menulist {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: gray;
+  display: none;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.Menulist > p{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.Menulist > p:hover{
+    background-color: #dcfce7;
+    color: green;
+}
+
+.items:hover .Menulist{
+    display: flex;
+}
+
+
+.mid{
+    width: 60%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font: 400;
+    font-family: nunito;
+    font-size: 17px;
+    color: gray;
+    cursor: pointer;
+}
+
+.home{
+    width: 18%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home:hover{
+    color: green;
+}
+.dp{
+    width: 18%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dp:hover{
+    color: green;
+}
+
+.dp:hover .Menulist{
+    display: flex;
+}
+
+.pack{
+   width: 18%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pack:hover .Menulist{
+    display: flex;
+}
+
+.pack:hover{
+    color:green;
+}
+
+.use{
+    width: 18%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.use:hover{
+    color: green;
+}
+.review{
+    width: 18%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review:hover{
+    color: green;
+}
+
+.right{
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    font: 400;
+    font-family:nunito ;
+    font-size: 17px;
+    align-items: center;
+}
+
+.mail{
+    width: 49%;
+    height: 80%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mail:hover{
+    color: green;
+}
+
+.call{
+    width: 40%;
+    height: 80%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.call:hover{
+    color: green;
+}
+
+
+
+.deep-inner-button {
+  background: #f0f0f3;
+  border-radius: 20px;
+  box-shadow:
+    inset 8px 8px 14px rgba(0, 0, 0, 0.1),
+    inset -8px -8px 14px rgba(255, 255, 255, 0.6),
+    0 5px 12px rgba(0, 0, 0, 0.05); /* optional external shadow for elevation */
+  border: 1px solid #e0e0e0;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .mainNav {
+    display: none;
+  }
+}

@@ -1,0 +1,467 @@
+.product-details-container {
+  padding: 1.5rem; /* Increased padding slightly for more breathing room around the card */
+  width: 100%;
+  max-width: 1200px;
+  margin: 1rem auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  box-sizing: border-box;
+}
+
+.back-to-products-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ecf0f1;
+  color: #34495e;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.25s ease;
+}
+
+.back-to-products-btn:hover {
+  background-color: #bdc3c7;
+}
+
+.product-details-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem; /* Slightly reduced card padding if container padding is increased */
+  display: grid;
+  grid-template-columns: 1fr; /* Default to 1 column, will be overridden by media queries if needed */
+  gap: 1.5rem; /* Adjusted gap */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: 100%; /* This ensures it tries to fill the container's content box */
+  max-width: 100%; /* Prevents it from exceeding container's content box width */
+  box-sizing: border-box; /* Ensures padding is within the 100% width */
+}
+
+.product-gallery-detailed {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Added max-width to control gallery (and thus image) size */
+  margin: 0 auto; /* Center the gallery if it's narrower than the card */
+}
+
+.main-product-image-detailed {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Adjusted max-height to make image potentially smaller */
+  object-fit: contain; /* This ensures the whole image is visible */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #f0f0f0;
+}
+
+.main-product-image-detailed.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.gallery-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  z-index: 10;
+}
+
+.gallery-nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.image-thumbnails-detailed {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  justify-content: center;
+  width: 100%;
+}
+
+.thumbnail-image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.7;
+  border: 2px solid transparent;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.thumbnail-image.active,
+.thumbnail-image:hover {
+  opacity: 1;
+  border-color: #3498db;
+}
+
+.product-info-section-detailed {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+.product-title-detailed {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  overflow-wrap: break-word;
+}
+
+.price-section-detailed {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.current-price-detailed {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.original-price-detailed {
+  font-size: 1rem;
+  color: #7f8c8d;
+  text-decoration: line-through;
+}
+
+.discount-badge-detailed {
+  background-color: #e74c3c;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.description-section-detailed,
+.list-section-detailed {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.description-section-detailed h3,
+.list-section-detailed h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.description-section-detailed p,
+.list-section-detailed ul {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  white-space: normal;
+  width: 100%;
+  max-width: 100%;
+  word-break: break-word;
+  margin: 0;
+  padding: 0;
+}
+
+.list-section-detailed ul {
+  list-style-position: inside;
+  padding-left: 0.5rem;
+}
+
+.list-section-detailed li {
+  margin-bottom: 0.3rem;
+}
+
+.delete-section {
+  margin-top: auto; /* Pushes delete button to the bottom */
+  padding-top: 1rem;
+  border-top: 1px solid #ecf0f1;
+}
+
+.delete-btn {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.initial-delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.initial-delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.confirm-delete-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.confirm-delete-actions p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.confirm-delete-btn {
+  background-color: #c0392b;
+  color: white;
+}
+
+.confirm-delete-btn:hover {
+  background-color: #a93226;
+}
+
+.cancel-delete-btn {
+  background-color: #bdc3c7;
+  color: #2c3e50;
+}
+
+.cancel-delete-btn:hover {
+  background-color: #95a5a6;
+}
+
+.delete-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message.main-error-message {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.product-not-found {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments for ProductDetails.css */
+@media (min-width: 993px) { /* Apply two-column layout for larger screens */
+  .product-details-card {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* More flexible grid */
+    /* Or, if you prefer a fixed 2-column approach for gallery and info: */
+    /* grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); */ /* Example: Gallery takes more space */
+    gap: 2rem;
+  }
+  .product-gallery-detailed {
+    max-width: 100%; /* Allow gallery to use its allocated grid space */
+  }
+}
+
+@media (max-width: 992px) {
+  .product-details-card {
+    grid-template-columns: 1fr; /* Stack gallery and info */
+    padding: 1rem; /* Consistent padding */
+  }
+  
+  .main-product-image-detailed {
+    max-height: 350px; /* Keep this or adjust as needed */
+    /* width: auto; */ /* Not needed if width: 100% is set and parent controls size */
+    /* max-width: 100%; */ /* Already set */
+  }
+  .product-gallery-detailed {
+    max-width: 100%; /* Ensure gallery takes full width in single column */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-details-container {
+    padding: 1rem; /* Adjusted padding */
+  }
+  .product-details-card {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+  
+  .product-gallery-detailed,
+  .product-info-section-detailed {
+    padding: 0.5rem; 
+  }
+  
+  .main-product-image-detailed {
+    margin-bottom: 0.5rem;
+    max-height: 300px; /* Further adjust max-height for smaller screens */
+  }
+  
+  .image-thumbnails-detailed {
+    padding: 0.5rem;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-details-container,
+  .product-details-card {
+    padding: 0.5rem;
+  }
+  .product-details-card {
+    gap: 0.75rem;
+  }
+  
+  .product-gallery-detailed,
+  .product-info-section-detailed {
+    padding: 0.25rem;
+  }
+  .main-product-image-detailed {
+    max-height: 250px; /* Further adjust max-height for very small screens */
+  }
+  
+  .description-section-detailed,
+  .list-section-detailed {
+    padding: 0.25rem;
+  }
+}
+
+/* Parent container to hold gallery and info sections */
+.product-detail-container { /* Or your existing main container for product details */
+  display: flex;
+  flex-wrap: wrap; /* Wrap on small screens if space is insufficient */
+  gap: 20px; /* Spacing between sections */
+  max-width: 1200px; /* Overall max-width for the layout */
+  margin: 0 auto; /* Center layout on the page */
+  padding: 15px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  /* overflow: hidden; */ /* Consider if this is needed on the main container; often better on children */
+}
+
+/* Gallery section - ensures images stay contained */
+.product-gallery-detailed {
+  flex: 1; /* Allows the gallery to grow and shrink as needed */
+  min-width: 300px; /* Minimum width before wrapping or becoming too small */
+  /* max-width: 600px; */ /* Max-width can be useful, but flex-basis might be more flexible with flex:1 */
+  overflow: hidden; /* Clip overflowing content, like oversized images before they are scaled */
+  border-radius: 8px; /* Optional: for aesthetics */
+  background: #f5f5f5; /* Optional: background for the gallery area */
+  display: flex; /* To help manage internal image layout if needed */
+  flex-direction: column; /* Stack main image and thumbnails if any */
+}
+
+/* Constrain images proportionally within the gallery */
+.product-gallery-detailed img, /* Target all images, or be more specific e.g., .main-product-image-detailed */
+.main-product-image-detailed img { /* If you have a specific class for the main image */
+  width: 100%; /* Make image responsive to gallery width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure image does not exceed gallery width */
+  object-fit: contain; /* Scale image to fit within bounds, preserving aspect ratio without cropping */
+  display: block; /* Remove extra space below image */
+}
+
+/* Info section - scrollable for long content */
+.product-info-section-detailed {
+  flex: 1; /* Allows the info section to grow and shrink */
+  min-width: 300px; /* Minimum width before wrapping or becoming too small */
+  /* max-width: 500px; */ /* Max-width can be useful, adjust as needed */
+  max-height: 80vh; /* Limit height to 80% of viewport height to prevent excessive length */
+  overflow-y: auto; /* Enable vertical scrollbar if content exceeds max-height */
+  padding: 15px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  border: 1px solid #eee; /* Optional: for visual separation */
+  border-radius: 8px; /* Optional: for aesthetics */
+}
+
+/* Mobile responsiveness - adjustments for smaller screens */
+@media (max-width: 768px) {
+  .product-detail-container { /* Or your existing main container */
+    flex-direction: column; /* Stack gallery and info sections vertically */
+    gap: 15px; /* Adjust gap for stacked layout */
+  }
+
+  .product-gallery-detailed,
+  .product-info-section-detailed {
+    max-width: 100%; /* Allow both sections to take full width in column layout */
+    min-width: 100%; /* Ensure they take full width */
+    flex-basis: auto; /* Reset flex-basis for column layout */
+    max-height: none; /* Reset max-height for info section or set a new mobile-specific one */
+  }
+
+  .product-info-section-detailed {
+    overflow-y: visible; /* Or 'auto' if you still want scroll on mobile for very long content */
+    /* Consider adjusting max-height specifically for mobile if needed */
+  }
+}
+
+/* You might have existing styles for .product-details-card. 
+   If .product-detail-container is a new wrapper, ensure it's used in your JSX.
+   If you are modifying an existing container like .product-details-card, 
+   apply the .product-detail-container styles to it directly. 
+   For example: 
+
+.product-details-card { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 15px; 
+  box-sizing: border-box; 
+} 
+
+And then in the media query:
+
+@media (max-width: 768px) {
+  .product-details-card {
+    flex-direction: column;
+  }
+  // .product-gallery-detailed and .product-info-section-detailed rules as above
+}
+
+*/

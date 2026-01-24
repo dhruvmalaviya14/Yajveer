@@ -1,0 +1,155 @@
+/* Sidebar1.css */
+.sidebar1-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar1-content {
+  background: white;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  box-shadow: 0 0 30px gray;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease forwards;
+  overflow: hidden;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.sdclose {
+  width: 100%;
+  height: 5%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5%;
+  color: gray;
+  font-size: larger;
+}
+
+.closeico {
+  cursor: pointer;
+}
+
+.sidebar1cont {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.side1con1 {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.itemsName1 {
+  width: 100%;
+  border-bottom: 1.5px solid gray;
+  color: gray;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.itemsName1:hover {
+  color: green;
+  border-bottom: 1.5px solid green;
+}
+
+.contactSection {
+  padding: 5px 20px 20px 20px;
+  color: gray;
+  flex-shrink: 0;
+}
+
+.contactHeader {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: gray;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: gray;
+}
+
+.contactItem:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.contactItem i {
+  font-size: 18px;
+  color: #444;
+}
+
+.contactItem:hover i {
+  color: green;
+}
+
+.authSection {
+  margin: 20px 0 30px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+.authLink {
+  text-decoration: none;
+  color: green;
+  font-size: 16px;
+}
+
+.authLink:hover {
+  text-decoration: underline;
+}
+
+@media (min-width:1024px) {
+  .sidebar1-overlay {
+    display: none;
+  }
+}
+
+@media (max-width:650px) {
+  .sidebar1-overlay {
+    width: 60vw;
+  }
+}
+
+@media (max-width:450px) {
+  .sidebar1-overlay {
+    width: 80vw;
+  }
+}

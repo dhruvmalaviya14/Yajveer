@@ -1,0 +1,150 @@
+.contact-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    gap: 2rem;
+    min-height: 600px;
+}
+
+.map-container {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.form-container {
+    flex: 1;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #666;
+    font-family: 'Nunito', sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #22c55e;
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+}
+
+.subject-select-container {
+    position: relative;
+    background-color: white;
+}
+
+.selected-option {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.selected-option:hover {
+    border-color: #22c55e;
+}
+
+.options-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.options-list.show {
+    display: block;
+}
+
+.option {
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option:hover {
+    background-color: #dcfce7;
+    color: #22c55e;
+}
+
+.submit-btn {
+    background-color: #22c55e;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+.submit-btn:hover {
+    background-color: #15803d;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+}

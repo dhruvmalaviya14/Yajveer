@@ -1,0 +1,203 @@
+.adtm {
+    width: 100vw;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.adti {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mainAdt {
+    width: 100%;
+    height: 80%;
+    background-color: #15803d;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.contentAdt {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    justify-content: center;
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+.p1Adt {
+    width: 100%;
+    padding-bottom: 2%;
+    gap: 5px;
+}
+
+.p1Adt p {
+    color: yellow;
+    font-size: 1.1vw;
+}
+
+.p1Adt h1 {
+    font-size: 2vw;
+    margin: 0.5vw 0;
+}
+
+.p1Adt h4 {
+    font-size: 1.2vw;
+}
+
+.p2Adt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2vw;
+    font-weight: 700;
+    padding-top: 1vw;
+    gap: 0.8vw;
+}
+
+.p2a1, .p2a2, .p2a3, .p2a4 {
+    width: 100%;
+}
+
+.aradt {
+    color: yellow;
+    margin-right: 0.5vw;
+}
+
+.imgAdt {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgAdt img {
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+
+    .adtm{
+        height: 89vh;
+    }
+    .mainAdt{
+        flex-direction: column-reverse;
+    }
+
+    .imgAdt{
+        width: 100%;
+        height: 60%;
+    } 
+     
+    .imgAdt img{
+        width: 100%;
+        height: 100%;
+    }
+
+ .contentAdt {
+    width: 100%;
+    padding-left: 25%;
+  }
+
+  .p1Adt p{
+    font-size: 20px;
+  }
+
+  .p1Adt h1{
+    font-size: 26px;
+  }
+
+  .p1Adt h4{
+    font-size: 17px;
+  }
+
+  .p2Adt{
+    font-size: 15px;
+  }
+    
+}
+
+@media  (max-width:870px) {
+    .contentAdt{
+        padding-left: 18%;
+    }
+}
+
+@media (max-width:750px) {
+    .contentAdt{
+        padding-left: 15%;
+    }
+
+    .p1Adt p{
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .p1Adt h1{
+        font-size: 21px;
+        padding: 5px;
+    }
+    .p1Adt h4{
+        font-size: 15px;
+        padding: 5px;
+    }
+}
+
+@media (max-width:550px) {
+    .p2Adt {
+        gap: 2.5vw;
+    }
+    .p1Adt p{
+        font-size: 17px;
+        padding: 5px;
+    }
+
+    .p1Adt h1{
+        font-size: 17px;
+        padding: 5px;
+    }
+
+    .p1Adt h4{
+        font-size: 15px;
+        padding: 5px;
+    }
+}
+
+@media (max-width:400px) {
+     .imgAdt{
+        width: 100%;
+        height: 40%;
+    } 
+     .p2Adt {
+        gap: 5vw;
+    }
+     .contentAdt{
+        padding-left: 5%;
+    }
+
+   
+    .p1Adt p{
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .p1Adt h1{
+        font-size: 15px;
+           padding: 5px;
+    }
+
+    .p1Adt h4{
+        font-size: 14px;
+           padding: 5px;
+    }
+
+
+}

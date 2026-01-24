@@ -1,0 +1,124 @@
+/* Base Styles for all screen sizes (Mobile First) */
+.terms-container {
+  max-width: 90%; /* Default for mobile, adjust for larger screens */
+  margin: 20px auto; /* Center the container with some top/bottom margin */
+  padding: 15px;
+  background-color: #ffffff; /* White background for content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Slightly rounded corners */
+  line-height: 1.6; /* Improve readability */
+  font-family: Arial, sans-serif; /* Consistent font */
+  color: #333; /* Dark gray text */
+}
+
+.terms-container h1 {
+  font-size: 2.2em; /* Larger heading for main title */
+  color: #2c3e50; /* Darker blue/gray for headings */
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.terms-container h2 {
+  font-size: 1.8em; /* Sub-headings */
+  color: #34495e; /* Slightly lighter heading color */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee; /* Underline for separation */
+  padding-bottom: 5px;
+}
+
+.terms-container h3 {
+  font-size: 1.4em; /* Smaller sub-headings if you add them later */
+  color: #34495e;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.terms-container p {
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.terms-container strong {
+  font-weight: bold;
+  color: #007bff; /* Highlight important names/phrases */
+}
+
+.terms-container ul {
+  list-style-type: disc; /* Default disc bullets */
+  margin-left: 25px; /* Indent lists */
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.terms-container ul li {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+.terms-container small {
+  display: block; /* Make small tag take full width */
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85em;
+  color: #777;
+}
+
+/* --- Responsive Styles --- */
+
+/* Tablet styles (e.g., 768px and up) */
+@media (min-width: 768px) {
+  .terms-container {
+    max-width: 750px; /* Slightly wider for tablets */
+    padding: 30px;
+  }
+
+  .terms-container h1 {
+    font-size: 2.8em;
+  }
+
+  .terms-container h2 {
+    font-size: 2.2em;
+  }
+
+  .terms-container p {
+    font-size: 1.05em;
+  }
+
+  .terms-container ul {
+    margin-left: 35px;
+  }
+}
+
+/* Desktop styles (e.g., 1024px and up) */
+@media (min-width: 1024px) {
+  .terms-container {
+    max-width: 960px; /* Optimal width for desktops */
+    padding: 40px;
+  }
+
+  .terms-container h1 {
+    font-size: 3.2em;
+    margin-bottom: 30px;
+  }
+
+  .terms-container h2 {
+    font-size: 2.5em;
+    margin-top: 40px;
+  }
+
+  .terms-container p {
+    font-size: 1.1em;
+  }
+
+  .terms-container ul {
+    margin-left: 40px;
+  }
+}
+
+/* Optional: Even larger screens (e.g., 1200px and up) */
+@media (min-width: 1200px) {
+  .terms-container {
+    max-width: 1100px; /* For larger monitors */
+  }
+}

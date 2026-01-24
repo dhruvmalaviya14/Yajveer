@@ -1,0 +1,157 @@
+:root {
+  --nf-green: #1a3a1e;
+  --nf-light-green: #78a06a;
+  --nf-gold: #d4af37;
+  --nf-bg: #f8f5f0;
+  --nf-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.nf-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #f8f5f0, #eae4d8);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+}
+
+.nf-content {
+  position: relative;
+  background: white;
+  border-radius: 24px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: var(--nf-shadow);
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid #eee;
+  z-index: 2;
+}
+
+.nf-border {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid var(--nf-gold);
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.nf-symbol {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  border: 4px solid var(--nf-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nf-symbol::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: var(--nf-green);
+  border-radius: 50%;
+}
+
+.nf-error-box {
+  margin-top: 20px;
+}
+
+.nf-code {
+  font-size: 6rem;
+  color: var(--nf-green);
+  margin: 0;
+  font-weight: 700;
+}
+
+.nf-divider {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, var(--nf-gold), var(--nf-light-green));
+  border-radius: 2px;
+  margin: 20px auto;
+}
+
+.nf-title {
+  font-size: 1.8rem;
+  color: var(--nf-green);
+  margin: 10px 0 30px;
+}
+
+.nf-button {
+  background: linear-gradient(to right, var(--nf-light-green), var(--nf-green));
+  border: none;
+  border-radius: 40px;
+  padding: 14px 28px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nf-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.nf-button-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.nf-floating-herbs {
+  display: none; /* Optional: remove or keep as decorative background */
+}
+
+@media (max-width: 768px) {
+  .nf-content {
+    padding: 40px 25px;
+  }
+
+  .nf-code {
+    font-size: 4.5rem;
+  }
+
+  .nf-title {
+    font-size: 1.5rem;
+  }
+
+  .nf-button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nf-code {
+    font-size: 3.5rem;
+  }
+
+  .nf-title {
+    font-size: 1.2rem;
+  }
+
+  .nf-button {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}

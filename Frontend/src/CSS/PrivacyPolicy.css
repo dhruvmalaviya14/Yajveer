@@ -1,0 +1,202 @@
+/* Base Styles */
+.privacy-policy-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  max-width: 900px; 
+  margin: 40px auto; 
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+  border-radius: 12px;
+}
+
+.privacy-title {
+  font-size: 2.8rem;
+  color: #2f855a; 
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.effective-date {
+  text-align: center;
+  font-size: 1rem;
+  color: #7a7a7a;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.privacy-paragraph {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  color: #4a4a4a;
+}
+
+.privacy-paragraph strong {
+  color: #2f855a; 
+}
+
+.privacy-paragraph a {
+  color: #0e6140; 
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.privacy-paragraph a:hover {
+  text-decoration: underline;
+  color: #2f855a;
+}
+
+.privacy-subtitle {
+  font-size: 2rem;
+  color: #1a202c; 
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.privacy-list {
+  list-style-type: disc; 
+  margin-left: 25px;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+.privacy-list li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.privacy-list ul { 
+  list-style-type: circle; 
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 20px;
+}
+
+.privacy-list ul li {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.privacy-list a {
+  color: #0e6140;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.privacy-list a:hover {
+  text-decoration: underline;
+  color: #2f855a;
+}
+
+/* --- Responsive Design --- */
+
+/* Desktop Specific Adjustments (optional, mostly covered by base) */
+@media (min-width: 1025px) {
+  .privacy-policy-container {
+    padding: 30px;
+  }
+}
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+  .privacy-policy-container {
+    margin: 30px auto; /* Slightly less vertical margin */
+    padding: 25px;
+    max-width: 800px; /* Adjust max-width for tablets */
+  }
+
+  .privacy-title {
+    font-size: 2.4rem;
+  }
+
+  .privacy-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .privacy-paragraph,
+  .privacy-list li {
+    font-size: 1rem;
+  }
+
+  .privacy-list ul li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .privacy-policy-container {
+    margin: 20px 15px; /* More margin on sides for smaller screens */
+    padding: 20px;
+    box-shadow: none; /* Remove shadow to save space on mobile */
+    border-radius: 0; /* Remove border-radius on mobile for full width look */
+    max-width: 100%; /* Allow container to take full width with padding */
+  }
+
+  .privacy-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .effective-date {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+
+  .privacy-subtitle {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    margin-bottom: 12px;
+  }
+
+  .privacy-paragraph,
+  .privacy-list li {
+    font-size: 0.95rem;
+  }
+
+  .privacy-list {
+    margin-left: 20px; /* Slightly less indent */
+  }
+
+  .privacy-list ul {
+    margin-left: 15px;
+  }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 480px) {
+  .privacy-policy-container {
+    padding: 15px;
+    margin: 15px 10px;
+  }
+
+  .privacy-title {
+    font-size: 1.6rem;
+  }
+
+  .privacy-subtitle {
+    font-size: 1.3rem;
+    margin-top: 25px;
+  }
+
+  .privacy-paragraph,
+  .privacy-list li {
+    font-size: 0.9rem;
+  }
+
+  .privacy-list {
+    margin-left: 15px;
+  }
+
+  .privacy-list ul {
+    margin-left: 10px;
+  }
+}

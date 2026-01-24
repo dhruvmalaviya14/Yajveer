@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      :root {
+        --accent: #4caf50;
+        --lightAccent: #e8f5e9;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        position: relative;
+      }
+
+      body::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('{{logoUrl}}') no-repeat center / 60%;
+        opacity: 0.04;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .container {
+        padding: 0 32px 32px 32px;
+        position: relative;
+        z-index: 1;
+        text-align: left;
+      }
+
+      /* --- header layout --- */
+      .header {
+        position: relative;
+        margin-bottom: 0;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 30px; /* This ensures the divider stays below the logo */
+      }
+
+      .logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 130px;
+        height: auto;
+      }
+
+      .brand-block {
+        display: inline-block;
+        text-align: center;
+      }
+
+      .brand-title {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 700;
+        color: #000;
+        line-height: 1.25;
+      }
+
+      .tagline {
+        margin: 2px 0 0;
+        font-size: 13px;
+        color: #555;
+      }
+
+      .header-divider {
+        height: 2px;
+        background: #000;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 28px;
+      }
+
+      .info {
+        margin-bottom: 10px;
+      }
+
+      .info p {
+        margin: 4px 0;
+        font-size: 14px;
+      }
+
+      h2 {
+        margin-top: 30px;
+        font-size: 20px;
+        border-bottom: 2px solid var(--accent);
+        display: inline-block;
+        padding-bottom: 4px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+        font-size: 14px;
+      }
+
+      th, td {
+        border: 1px solid #ccc;
+        padding: 8px 12px;
+        text-align: left;
+      }
+
+      th {
+        background-color: var(--accent);
+        color: #fff;
+        font-weight: 600;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: var(--lightAccent);
+      }
+
+      .total {
+        text-align: right;
+        margin-top: 16px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .note {
+        margin-top: 12px;
+        font-size: 13px;
+        font-style: italic;
+        color: #555;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Centered header block -->
+      <div class="header">
+        <img src="{{logoUrl}}" alt="Logo" class="logo" />
+
+        <div class="brand-block">
+          <h1 class="brand-title">Yajveer Ayurved</h1>
+          <p class="tagline">Natural Ayurvedic Health Products</p>
+        </div>
+      </div>
+
+      <!-- Divider placed after enough space -->
+      <div class="header-divider"></div>
+
+      <!-- Left-aligned content -->
+      <div class="info">
+        <p><strong>Invoice #:</strong> {{orderId}}</p>
+        <p><strong>Date:</strong> {{date}}</p>
+      </div>
+
+      <div class="info">
+        <p><strong>Billed to:</strong></p>
+        <p>{{fullname}}</p>
+        <p>Phone: {{mobilenumber}}</p>
+        <p>Email: {{email}}</p>
+        <p>Address: {{deliveryAddress}}</p>
+        <p>Pincode: {{pincode}}</p>
+      </div>
+
+      <h2>Order Summary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Weight (g)</th>
+            <th>Qty</th>
+            <th>Unit Price (₹)</th>
+            <th>Total (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each products}}
+            <tr>
+              <td>{{this.name}}</td>
+              <td>{{this.weight}}</td>
+              <td>{{this.quantity}}</td>
+              <td>{{this.price}}</td>
+              <td>{{multiply this.price this.quantity}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+      <p class="total">Grand Total: ₹{{totalAmount}}</p>
+      <p class="note">
+        Note: All prices mentioned above are inclusive of GST.
+        This is a proper GST invoice for your purchase.
+      </p>
+    </div>
+  </body>
+</html>
