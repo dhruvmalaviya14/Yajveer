@@ -83,6 +83,7 @@ export default function Login() {
   const handleOpenSidebar = () => setSidebarOpen(true);
   const handleCloseSidebar = () => setSidebarOpen(false);
 
+  //redirect to home page
   if (redirect) {
     return <Navigate to="/" replace />;
   }

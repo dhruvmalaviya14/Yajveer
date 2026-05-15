@@ -12,8 +12,12 @@ import ADT from './Home/Adt';
 import Slider2 from './Home/Slider2';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
+
+
 export default function Home(){
+    // state management
     const [isSidebarOpen, setSidebarOpen] = useState(false);
+    //open and close sidebar functions
     const handleOpenSidebar = () => setSidebarOpen(true);
     const handleCloseSidebar = () => setSidebarOpen(false);
 
